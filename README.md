@@ -105,7 +105,7 @@ Formato esperado:
 Una vez que todo está configurado:
 
 ```bash
-python script.py
+python uploadBackup.py
 ```
 
 El script:
@@ -129,7 +129,7 @@ El script envía un email HTML con la siguiente información:
 Podés automatizar la ejecución diaria del script usando `crontab` en Linux. Por ejemplo, para ejecutar el script todos los días a las 12:00 del mediodía:
 
 ```cron
-0 12 * * * cd /script && . /script/venv/bin/activate && python3 /script/script.py >> /script/log/ejecucion.log 2>&1
+0 12 * * * cd /script && . /script/venv/bin/activate && python3 /script/uploadBackup.py >> /script/log/ejecucion.log 2>&1
 ```
 
 > Asegurate de reemplazar `/script` por la ruta real donde se encuentra tu proyecto.

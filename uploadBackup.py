@@ -27,7 +27,7 @@ SCOPES = [
 ]
 
 # Direccion de email
-emailUser = os.getenv("")
+email_user = os.getenv("")
 
 # Directorio donde se encuentran los backups locales
 dir_backup = os.getenv("")
@@ -218,7 +218,7 @@ def enviar_correo():
     print("Error:", stderr)
 
     mensaje = MIMEMultipart()
-    mensaje["to"] = "{emailUser}"
+    mensaje["to"] = "{email_user}"
     mensaje["subject"] = "Registro de backup"
     cuerpo = f"""\
     <html>
